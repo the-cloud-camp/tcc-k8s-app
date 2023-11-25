@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-g1-app
+  namespace: argocd
+spec:
+  project: default
+  source: 
+    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config-nonprd.git
+    targetRevision: group-1
+    path: manifest
+    directory:
+      recurse: true
+  destination:
+    name: in-cluster
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
