@@ -9,8 +9,10 @@ spec:
     repoURL: git@github.com:the-cloud-camp/tcc-k8s-app.git
     targetRevision: main
     path: prod
+    directory:
+      recurse: true
   destination:
-    server: https://kubernetes.default.svc
+    server: in-cluster
     namespace: argocd
   syncPolicy:
     automated:
