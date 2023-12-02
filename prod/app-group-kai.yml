@@ -1,17 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kai-nuxtjs-application-dev
+  name: kai-nuxtjs-application
   namespace: argocd
 spec:
   project: default
   source: 
-    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config-nonprd.git
+    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config.git
     targetRevision: main
     path: kai-nuxtjs
   destination:
     name: in-cluster
-    namespace: dev
+    namespace: prod
   syncPolicy:
     automated:
       prune: true
+    syncOptions:
+      - CreateNamespace=true
