@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source: 
-    repoURL: git@github.com:the-cloud-camp/tcc-group-5.git
-    targetRevision: argocd
-    path: argocd/dev
+    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config-nonprd.git
+    targetRevision: group-5
+    path: manifest
   destination:
     name: in-cluster
-    namespace: group-5-dev
-#  syncPolicy:
-#    automated:
-#      prune: true
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
