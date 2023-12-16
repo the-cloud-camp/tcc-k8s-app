@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-group-4
+  name: app-group-4-dev
   namespace: argocd
 spec:
   project: default
@@ -13,7 +13,7 @@ spec:
       recurse: true
   destination:
     name: in-cluster
-    namespace: argocd
+    namespace: dev
   syncPolicy:
     automated:
       prune: true
