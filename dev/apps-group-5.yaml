@@ -3,11 +3,13 @@ kind: Application
 metadata:
   name: apps-group-5
   namespace: argocd
+  labels:
+    group: group-5
 spec:
   project: default
   source: 
     repoURL: git@github.com:the-cloud-camp/tcc-group-5.git
-    targetRevision: argocd
+    targetRevision: develop
     path: argocd/dev
   destination:
     name: in-cluster
