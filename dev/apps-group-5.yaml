@@ -8,12 +8,12 @@ metadata:
 spec:
   project: default
   source: 
-    repoURL: git@github.com:the-cloud-camp/tcc-group-5.git
-    targetRevision: develop
-    path: argocd/dev
+    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config-nonprd.git
+    targetRevision: group-5
+    path: manifest
   destination:
     name: in-cluster
-    namespace: dev
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
