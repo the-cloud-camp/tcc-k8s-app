@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: app-group-5
   namespace: argocd
+  labels:
+    group: group-5
 spec:
   project: default
   source: 
@@ -11,7 +13,7 @@ spec:
     path: manifest
   destination:
     name: in-cluster
-    namespace: dev
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
