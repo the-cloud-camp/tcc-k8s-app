@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-group-5-prod
+  name: app-group-5
   namespace: argocd
   labels:
     group: group-5
