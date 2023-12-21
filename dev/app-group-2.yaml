@@ -11,6 +11,8 @@ spec:
     repoURL: git@github.com:the-cloud-camp/tcc-k8s-config-nonprd.git
     targetRevision: group-2
     path: app
+    directory:
+      recurse: true
   destination:
     name: in-cluster
     namespace: argocd
