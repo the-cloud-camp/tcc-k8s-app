@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kai-nuxtjs-application-dev
+  name: app-group-kai
   namespace: argocd
 spec:
   project: default
