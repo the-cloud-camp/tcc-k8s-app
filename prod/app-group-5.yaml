@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-group-1
+  name: app-group-5-prod
   namespace: argocd
+  labels:
+    group: group-5
 spec:
   project: default
   source: 
-    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config-nonprd.git
-    targetRevision: group-1
+    repoURL: git@github.com:the-cloud-camp/tcc-k8s-config.git
+    targetRevision: group-5
     path: manifest
-    directory:
-      recurse: true
   destination:
     name: in-cluster
     namespace: argocd

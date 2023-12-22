@@ -3,14 +3,14 @@ kind: Application
 metadata:
   name: dev-application-rg
   namespace: argocd
+  labels:
+    resource: root
 spec:
   project: default
   source: 
     repoURL: git@github.com:the-cloud-camp/tcc-k8s-app.git
     targetRevision: main
     path: dev
-    directory:
-      recurse: true
   destination:
     name: in-cluster
     namespace: argocd
