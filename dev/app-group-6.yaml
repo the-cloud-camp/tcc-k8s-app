@@ -8,7 +8,7 @@ spec:
   source: 
     repoURL: git@github.com:the-cloud-camp/tcc-k8s-config-nonprd.git
     targetRevision: group-6
-    path: manifest
+    # path: /
     directory:
       recurse: true
   destination:
