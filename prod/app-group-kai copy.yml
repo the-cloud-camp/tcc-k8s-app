@@ -8,7 +8,7 @@ spec:
   source: 
     repoURL: git@github.com:the-cloud-camp/tcc-k8s-config.git
     targetRevision: group-4
-    path: app
+    path: apps
   destination:
     name: in-cluster
     namespace: argocd
